@@ -1,0 +1,282 @@
+object BaseDatos: TBaseDatos
+  Left = 291
+  Height = 249
+  Top = 127
+  Width = 442
+  Caption = 'Agenda Basada en Archivos Binarios tipo Record'
+  ClientHeight = 249
+  ClientWidth = 442
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  object Label1: TLabel
+    Left = 22
+    Height = 17
+    Top = 27
+    Width = 58
+    Alignment = taRightJustify
+    Caption = 'Nombre: '
+    Font.Height = -13
+    Font.Style = [fsBold]
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 22
+    Height = 17
+    Top = 59
+    Width = 60
+    Alignment = taRightJustify
+    Caption = 'Apellido: '
+    Font.Height = -13
+    Font.Style = [fsBold]
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 19
+    Height = 17
+    Top = 91
+    Width = 63
+    Alignment = taRightJustify
+    Caption = 'Telefono: '
+    Font.Height = -13
+    Font.Style = [fsBold]
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 17
+    Top = 123
+    Width = 66
+    Alignment = taRightJustify
+    Caption = 'Dirección: '
+    Font.Height = -13
+    Font.Style = [fsBold]
+    Layout = tlCenter
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 88
+    Height = 23
+    Top = 24
+    Width = 176
+    TabOrder = 0
+    Text = 'Nombre'
+  end
+  object Edit2: TEdit
+    Left = 88
+    Height = 23
+    Top = 56
+    Width = 176
+    TabOrder = 1
+    Text = 'Apellidos'
+  end
+  object Edit3: TEdit
+    Left = 88
+    Height = 23
+    Top = 88
+    Width = 176
+    TabOrder = 2
+    Text = 'Telefono'
+  end
+  object Edit4: TEdit
+    Left = 88
+    Height = 23
+    Top = 120
+    Width = 176
+    TabOrder = 3
+    Text = 'Calle, numero, ciudad'
+  end
+  object Panel1: TPanel
+    Left = 22
+    Height = 44
+    Top = 160
+    Width = 370
+    ClientHeight = 44
+    ClientWidth = 370
+    TabOrder = 4
+    object sbtn_Primero: TSpeedButton
+      Left = 4
+      Height = 36
+      Top = 4
+      Width = 30
+      Align = alLeft
+      BorderSpacing.Around = 3
+      Caption = '|<'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnClick = sbtn_PrimeroClick
+      ParentFont = False
+    end
+    object sbtn_Anterior: TSpeedButton
+      Left = 37
+      Height = 36
+      Top = 4
+      Width = 30
+      Align = alLeft
+      BorderSpacing.Around = 3
+      Caption = '<'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnClick = sbtn_AnteriorClick
+      ParentFont = False
+    end
+    object sbtn_Siguiente: TSpeedButton
+      Left = 173
+      Height = 36
+      Top = 4
+      Width = 30
+      Align = alLeft
+      BorderSpacing.Around = 3
+      Caption = '>'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnClick = sbtn_SiguienteClick
+      ParentFont = False
+    end
+    object sbtn_Ultimo: TSpeedButton
+      Left = 206
+      Height = 36
+      Top = 4
+      Width = 30
+      Align = alLeft
+      BorderSpacing.Around = 3
+      Caption = '>|'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnClick = sbtn_UltimoClick
+      ParentFont = False
+    end
+    object Lb_NumRegActual: TLabel
+      Left = 70
+      Height = 36
+      Top = 4
+      Width = 100
+      Align = alLeft
+      Alignment = taCenter
+      AutoSize = False
+      BorderSpacing.Around = 3
+      Caption = '1 de 0'
+      Color = clWhite
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Layout = tlCenter
+      ParentColor = False
+      ParentFont = False
+      Transparent = False
+    end
+    object sbtn_IrAlReg: TSpeedButton
+      Left = 311
+      Height = 36
+      Top = 4
+      Width = 55
+      Align = alRight
+      BorderSpacing.Top = 3
+      BorderSpacing.Right = 3
+      BorderSpacing.Bottom = 3
+      Caption = 'Ir '
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      Font.Style = [fsBold]
+      OnClick = sbtn_IrAlRegClick
+      ParentFont = False
+    end
+    object Edit_IrA: TEdit
+      Left = 248
+      Height = 28
+      Top = 8
+      Width = 63
+      Align = alClient
+      Alignment = taCenter
+      BorderSpacing.Left = 12
+      BorderSpacing.Top = 7
+      BorderSpacing.Bottom = 7
+      BorderSpacing.CellAlignVertical = ccaCenter
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -16
+      Font.Name = 'Courier New'
+      Font.Pitch = fpFixed
+      Font.Quality = fqDraft
+      NumbersOnly = True
+      ParentFont = False
+      TabOrder = 0
+      Text = '1'
+    end
+  end
+  object btn_Anadir_Reg: TButton
+    Left = 288
+    Height = 25
+    Top = 22
+    Width = 123
+    Caption = 'Anadir Reg.'
+    OnClick = btn_Anadir_RegClick
+    TabOrder = 5
+  end
+  object btn_Insertar_Reg: TButton
+    Left = 288
+    Height = 25
+    Top = 53
+    Width = 123
+    Caption = 'Insertar Reg.'
+    OnClick = btn_Insertar_RegClick
+    TabOrder = 6
+  end
+  object btn_Borrar_Reg: TButton
+    Left = 288
+    Height = 25
+    Top = 118
+    Width = 123
+    Caption = 'Borrar Reg.'
+    OnClick = btn_Borrar_RegClick
+    TabOrder = 7
+  end
+  object btn_Guardar_Reg: TButton
+    Left = 288
+    Height = 25
+    Top = 83
+    Width = 123
+    Caption = 'Guardar Reg.'
+    OnClick = btn_Guardar_RegClick
+    TabOrder = 8
+  end
+  object btn_Borrar_BaseReg: TButton
+    Left = 168
+    Height = 25
+    Top = 216
+    Width = 232
+    Caption = 'Borrar Toda la Base Y Cierra Aplicacion'
+    Color = clNone
+    Font.Color = clRed
+    OnClick = btn_Borrar_BaseRegClick
+    ParentFont = False
+    TabOrder = 9
+  end
+end
