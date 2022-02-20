@@ -23,5 +23,11 @@ LazPlanet
 
 http://lazplanet.blogspot.com/
 
+Wiki Lazarus Free Pascal
+
+https://wiki.freepascal.org/Lazarus_Tutorial/es#.2A_RTTI
+
+https://wiki.freepascal.org/Lazarus_IDE_Tools/es
+
 
 
