@@ -1,0 +1,10 @@
+las carpetas vacias es porque esta incluidos en otro mayor A00
+
+
+
+la mayoria esta creados con Lazarus Free Pascal 2.0.2
+
+
+los componentes que falta se pueden descargar actualizados desde el administrador de paquete en linea de las versiones actuales de  lazarus.
+
+
